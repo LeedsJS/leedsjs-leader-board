@@ -19,6 +19,16 @@ module.exports = function(environment) {
     }
   };
 
+  ENV.contentSecurityPolicy = {
+    'default-src': "'none'",
+    'script-src': "'self'",
+    'font-src': "'self' https://fonts.gstatic.com",
+    'connect-src': "'self' https://mansona.cloudant.com http://leedsjs-leader-board.manson.ie",
+    'img-src': "'self' data:",
+    'media-src': "'self'",
+    'style-src': "'self' 'unsafe-inline'"
+  };
+
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;

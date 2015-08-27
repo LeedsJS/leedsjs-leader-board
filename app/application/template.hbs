@@ -1,0 +1,28 @@
+<div id="paper-wormhole"></div>
+
+{{#paper-nav-container class="site-nav-container"}}
+  {{#paper-sidenav class="md-sidenav-left md-whiteframe-z2 site-sidenav" locked-open="gt-sm"}}
+    {{#paper-toolbar class="site-content-toolbar"}}
+      <div class="md-toolbar-tools">
+        <div class="logo">
+          <strong>LeedsJS Leader Board</strong>
+        </div>
+      </div>
+    {{/paper-toolbar}}
+
+    {{#paper-content}}
+
+      {{#paper-list}}
+        {{#paper-item action="transitionTo" param="index"}}Home{{/paper-item}}
+        {{#paper-item action="transitionTo" param="vote"}}Vote{{/paper-item}}
+        {{#paper-item action="transitionTo" param="entries"}}Entries{{/paper-item}}
+        {{#paper-item action="transitionTo" param="users"}}Users{{/paper-item}}
+      {{/paper-list}}
+
+    {{/paper-content}}
+  {{/paper-sidenav}}
+
+  <div layout="column" tabindex="-1" role="main" flex>
+    {{outlet}}
+  </div>
+{{/paper-nav-container}}

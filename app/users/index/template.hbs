@@ -1,0 +1,18 @@
+<h3>Add some users</h3>
+{{#paper-button action="add" primary=true raised=true}}Add{{/paper-button}}
+
+{{#paper-content class="md-whiteframe-z1 list-demo" }}
+  {{#paper-list}}
+    {{#each model as |item|}}
+      {{#paper-item class="md-3-line" }}
+        <img src= {{item.face}} alt= {{item.who}} class="md-avatar">
+        <div class="md-list-item-text">
+          <h3>{{item.name}}</h3>
+          <p>
+            {{item.notes}}
+          </p>
+        </div>
+      {{/paper-item}}
+    {{/each}}
+  {{/paper-list}}
+{{/paper-content}}

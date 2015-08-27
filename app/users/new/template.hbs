@@ -1,0 +1,6 @@
+<p>
+  {{paper-input label="Name (required)" value=model.name icon="person" icon-class="name" required=true}}
+  {{paper-input label="Email" type="email" value=model.email icon="email" icon-class="email"}}
+  {{paper-input label="Image" type="url" value=model.image}}
+</p>
+{{#paper-button action="save" primary=true raised=true}}Save{{/paper-button}}

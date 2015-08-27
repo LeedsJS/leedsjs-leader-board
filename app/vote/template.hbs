@@ -1,0 +1,30 @@
+{{#paper-toolbar}}
+    <div class="md-toolbar-tools">
+      {{#paper-sidenav-toggle as |toggle|}}
+        {{#paper-button target=toggle action="toggleMenu" icon-button=true}}{{paper-icon icon="menu"}}{{/paper-button}}
+      {{/paper-sidenav-toggle}}
+        <span class="md-breadcrumb-page">Vote</span>
+    </div>
+{{/paper-toolbar}}
+{{#paper-content class="md-padding"}}
+<div class="doc-content">
+  <h3>Click who you want to vote for!</h3>
+  {{#paper-content class="md-whiteframe-z1 list-demo"}}
+    {{#paper-list}}
+      {{#each model as |item|}}
+        {{#paper-item class="md-3-line"}}
+            <img src={{item.face}} alt={{item.who}} class="md-avatar">
+            <div class="md-list-item-text">
+                <h3>{{item.name}}</h3>
+            </div>
+            {{#if (eq item.id application.model.user)}}
+              {{#paper-button raised=true}}Your vote{{/paper-button}}
+            {{else}}
+              {{#paper-button action=(action 'vote' item) primary=true raised=true}}Vote{{/paper-button}}
+            {{/if}}
+        {{/paper-item}}
+      {{/each}}
+    {{/paper-list}}
+  {{/paper-content}}
+</div>
+{{/paper-content}}

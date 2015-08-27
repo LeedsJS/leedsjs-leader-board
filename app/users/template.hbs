@@ -1,0 +1,13 @@
+{{#paper-toolbar}}
+  <div class="md-toolbar-tools">
+    {{#paper-sidenav-toggle as |toggle|}}
+      {{#paper-button target=toggle action="toggleMenu" icon-button=true}}{{paper-icon icon="menu"}}{{/paper-button}}
+    {{/paper-sidenav-toggle}}
+    <span class="md-breadcrumb-page">Users</span>
+  </div>
+{{/paper-toolbar}}
+{{#paper-content class="md-padding" }}
+  <div class="doc-content">
+    {{outlet}}
+  </div>
+{{/paper-content}}
